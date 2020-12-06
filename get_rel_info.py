@@ -1,6 +1,4 @@
 import os
-import rename_video
-from  rename_video  import  rename
 
 def get_codecs(video_info, summary):
     # Open the file with all the video information.

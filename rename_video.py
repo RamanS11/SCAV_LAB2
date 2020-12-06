@@ -1,12 +1,13 @@
 import os
 
 def rename(name, quality):
+    # Create aux variables needed.
     direc = '.'
     allfiles = os.listdir(direc)
     files = [fname for fname in allfiles if fname.endswith('.mp4')]
 
     for i in files:
-
+        # Create info.txt file with the info of the video.
         os.system('touch info.txt')
         os.system('ffmpeg -i ' + i + ' 2> info.txt')
 
@@ -38,8 +39,9 @@ def rename(name, quality):
 
 def rename_video():
 
-    scale = '1280x720,640x480,360x240,160x120'           # Create arrays to iterate over them.
-
+    # Create arrays to iterate over them.
+    scale = '1280x720,640x480,360x240,160x120'
+    # Force the user to select one option.
     while True:
         try:
             x = int(input('Which video quality you want to rename?: 1: 1280x720, 2: 640x480, 3: 360x240, 4: 160x120 \n'))
@@ -50,7 +52,7 @@ def rename_video():
                 break
             else:
                 print('Out of range. Try again')
-
+    # Get the output name from the user.
     y = input('With what name?: \n')
     print(scale.split(',')[int(x)-1])
     rename(y, scale.split(',')[int(x)-1])
