@@ -50,7 +50,7 @@ def change():
     in_name = names[int(x)-1]
     # Show the user the possible codecs (depending on audio or video).
     vid_codecs = ['vp3', 'vp8', 'vp9', 'av1']
-    aud_codecs = ['mp3', 'libvorbis', 'libopus']
+    aud_codecs = ['mp3', 'vorbis', 'libopus']
 
     print('Introduce the codec you want to use: ')
     aux = 1

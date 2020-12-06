@@ -1,5 +1,5 @@
 # Import all the scripts.
-from get_rel_info import get_info
+from get_rel_info import get_rel_info
 from rename_video import rename_video
 from resize import resize
 from codec_change import change
@@ -39,7 +39,7 @@ def lab2():
 
         if choice == 1:
             print("1. Get relevant information.")
-            get_info()
+            get_rel_info()
         elif choice == 2:
             print("2. Rename quality cuts.")
             rename_video()

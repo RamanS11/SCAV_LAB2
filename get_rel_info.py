@@ -36,7 +36,7 @@ def store_info(vid_name, file):
     # Create a file that stores all the video information.
     os.system('ffmpeg -i ' + vid_name + ' 2> ' + file)
 
-def get_info():
+def get_rel_info():
     vid_name = 'BBB.mp4'
     out_file = 'info_BBB.txt'
     summary_file = 'summary_info.txt'
@@ -53,10 +53,10 @@ def get_info():
     # Close the file.
     summary.close()
 
-    # Delate the large text file with all the video information.
+    # Delete the large text file with all the video information.
     os.system("rm " + out_file)
 
 
 if __name__ == '__main__':
-    get_info()
+    get_rel_info()
 
