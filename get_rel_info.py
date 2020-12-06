@@ -1,4 +1,6 @@
 import os
+import rename_video
+from  rename_video  import  rename
 
 def get_codecs(video_info, summary):
     # Open the file with all the video information.
@@ -36,8 +38,7 @@ def store_info(vid_name, file):
     # Create a file that stores all the video information.
     os.system('ffmpeg -i ' + vid_name + ' 2> ' + file)
 
-
-def get_rel_info():
+def get_info():
     vid_name = 'BBB.mp4'
     out_file = 'info_BBB.txt'
     summary_file = 'summary_info.txt'
@@ -59,4 +60,5 @@ def get_rel_info():
 
 
 if __name__ == '__main__':
-    get_rel_info()
+    get_info()
+
